@@ -167,7 +167,7 @@ h4 { font-size: 18px; }
     grid-template-columns: 1fr;
   }
 }
-/* HERO */
+
 .hero {
   position: relative;
   height: 80vh;
@@ -178,7 +178,7 @@ h4 { font-size: 18px; }
   align-items: center;
 }
 
-/* затемнение */
+
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -186,7 +186,7 @@ h4 { font-size: 18px; }
 }
 
 
-/* контент */
+
 .hero__content {
   position: relative;
   text-align: center;
@@ -204,7 +204,6 @@ h4 { font-size: 18px; }
   font-size: 18px;
 }
 
-/* кнопка */
 .hero .btn {
 
   font-size: 16px;
@@ -212,7 +211,6 @@ h4 { font-size: 18px; }
 
 }
 
-/* адаптив */
 @media (max-width: 768px) {
   .hero {
     height: 60vh;
@@ -365,7 +363,7 @@ h4 { font-size: 18px; }
   color: var(--color-text-light);
 }
 
-/* 🔹 Адаптив */
+
 @media (max-width: 1024px) {
   .about-content {
     flex-direction: column;
@@ -387,7 +385,7 @@ h4 { font-size: 18px; }
     grid-template-columns: 1fr;
   }
 }
-/* БУРГЕР */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -403,7 +401,7 @@ h4 { font-size: 18px; }
   transition: 0.3s;
 }
 
-/* Мобильное меню */
+
 @media (max-width: 768px) {
   .nav {
     position: absolute;
@@ -465,7 +463,7 @@ h4 { font-size: 18px; }
 html {
   scroll-behavior: smooth;
 }
-/* === OVERLAY === */
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -481,7 +479,7 @@ html {
   visibility: visible;
 }
 
-/* === БУРГЕР === */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -497,7 +495,6 @@ html {
   transition: 0.3s;
 }
 
-/* анимация в крестик */
 .burger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -510,7 +507,6 @@ html {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* === МОБИЛЬНОЕ МЕНЮ === */
 @media (max-width: 768px) {
   .nav {
     position: fixed;
@@ -543,7 +539,6 @@ html {
   }
 }
 
-/* === БЛОК СКРОЛЛА === */
 body.lock {
   overflow: hidden;
 }
@@ -555,23 +550,22 @@ body.lock {
     align-items: center;
   }
 
-  /* логотип слева */
   .header__inner img {
     justify-self: start;
   }
 
-  /* кнопка по центру */
+
   .btn {
     display: inline-block;
     justify-self: center;
   }
 
-  /* бургер справа */
+
   .burger {
     justify-self: end;
   }
 
-  /* меню как раньше */
+
   .nav {
     position: fixed;
     top: 0;
@@ -637,7 +631,7 @@ input, textarea {
   border-radius: 6px;
 }
 
-/* ВАЛИДАЦИЯ БЕЗ JS */
+
 input:invalid, textarea:invalid {
   border: 2px solid red;
 }
@@ -664,7 +658,7 @@ button {
   color: var(--color-text);
 }
 
-/* адаптив */
+
 @media (max-width: 768px) {
   .social-icons {
     flex-direction: column;
@@ -691,7 +685,7 @@ input, textarea {
   border-radius: 6px;
 }
 
-/* HTML-валидация */
+
 input:invalid, textarea:invalid {
   border: 2px solid red;
 }
