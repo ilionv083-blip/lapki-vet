@@ -11,6 +11,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
@@ -22,30 +23,41 @@
       <ul class="nav__list">
         <li><a href="#hero">Главная</a></li>
         <li><a href="#feature">О нас</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">О клинике</a></li>
-        <li><a href="#">Отзывы</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О клинике</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <a href="contacts.html">Контакты</a>
       </ul>
     </nav>
 
-    <a href="#" class="btn">Записаться</a>
+    <a href="booking.html" class="btn">Записаться</a>
+    <div class="burger" id="burger">
+  <span></span>
+  <span></span>
+  <span></span>
+  <nav class="nav" id="nav"></nav>
+  
+</div>
+
 
    
   </div>
 </header>
 
 <main>
-  <section class="hero">
+<section class="hero" id="hero">
+    
   <div class="hero__overlay"></div>
 
   <div class="container hero__content">
     <h1>Забота о здоровье ваших питомцев</h1>
     <p>Профессиональная ветеринарная помощь с любовью и вниманием</p>
     <br>
-    <a href="#cta" class="btn">Записаться на приём</a>
+    <a href="booking.html" class="btn">Записаться</a>
+    
   </div>
 </section>
-  <section class="features">
+<section class="features" id="feature">
   <div class="container">
     <h2 class="section-title">Почему выбирают нас</h2>
 
@@ -80,52 +92,48 @@
 
     </div>
 
-    <div class="services__btn">
-      <a href="#" class="btn">Подробнее</a>
-    </div>
+  <div class="services__btn">
+  <a href="why-us.html" class="btn">Подробнее</a>
+</div>
   </div>
 </section>
 
-<section class="catalog">
+<section class="catalog" id="services">
   <div class="container">
     <h2 style="text-align: center;">Популярные услуги</h2>
 
     <div class="catalog-grid">
 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/cat.jpg" >
-        </div>
-        <h3>Осмотр питомца</h3>
-        <p>Профилактический приём врача</p>
-        <span class="price">от 1000 ₽</span>
-        <button>Записаться</button>
-      </div>
 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/dog.jpg">
-        </div>
-        <h3>Вакцинация</h3>
-        <p>Комплекс прививок</p>
-        <span class="price">от 1500 ₽</span>
-        <button>Записаться</button>
-      </div>
+<!-- ФИЛЬТРЫ -->
+<div class="filters">
 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/dog2.jpg" >
-        </div>
-        <h3>Груминг</h3>
-        <p>Уход и стрижка животных</p>
-        <span class="price">от 1200 ₽</span>
-        <button>Подробнее</button>
-      </div>
+  <input type="text" id="search" placeholder="Поиск услуги...">
 
-    </div>
+  <select id="category">
+    <option value="all">Все категории</option>
+    <option value="treatment">Лечение</option>
+    <option value="care">Уход</option>
+    <option value="diagnostic">Диагностика</option>
+  </select>
+
+  <div class="price-filter">
+    <input type="number" id="minPrice" placeholder="Цена от">
+    <input type="number" id="maxPrice" placeholder="Цена до">
+  </div>
+
+</div>
+
+<p id="count">Найдено: 0</p>
+
+<!-- КАТАЛОГ -->
+<div class="catalog-grid" id="catalog"></div>
+
+
+      
   </div>
 </section>
-<section class="about">
+<section class="about" id="about">
   <div class="container about-content">
     
     <div class="about-text">
@@ -156,7 +164,7 @@
 
   </div>
 </section>
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="container">
     <h2 style="text-align: center;">Отзывы клиентов</h2>
 
@@ -180,14 +188,36 @@
   </div>
 </section>
 <section class="cta">
+ <section class="cta">
   <div class="container">
     <h2>Запишитесь на приём</h2>
-    <form class="cta-form">
-      <input type="email" placeholder="Ваш email">
-      <button>Записаться</button>
+
+    <form action="success.html">
+
+      <input type="text"
+             placeholder="Ваше имя"
+             required
+             minlength="2">
+
+      <input type="email"
+             placeholder="Email"
+             required>
+
+      <input type="tel"
+             placeholder="Телефон"
+             required
+             pattern="[0-9+\-\s]{6,}">
+
+      <textarea placeholder="Комментарий"
+                required
+                minlength="10"></textarea>
+
+      <button type="submit">Записаться</button>
+
     </form>
   </div>
 </section>
+<section class="features fade-in">
 
 <footer class="footer">
   <div class="container footer-grid">
@@ -223,7 +253,7 @@
 
 </main>
 
-<script src="js/script.js"></script>
+
 </body>
 </html>
            

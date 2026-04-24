@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Запись</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="container">
+  <h2>Запись на приём</h2>
+
+  <!-- форма -->
+  <form action="success.html">
+
+    <label>Услуга</label>
+    <select required>
+      <option value="">Выберите</option>
+      <option>Осмотр</option>
+      <option>Вакцинация</option>
+      <option>Груминг</option>
+    </select>
+
+    <label>Врач</label>
+    <select required>
+      <option value="">Выберите</option>
+      <option>Иванов</option>
+      <option>Петров</option>
+      <option>Сидоров</option>
+    </select>
+
+    <label>Дата</label>
+    <input type="date" required min="2024-01-01">
+
+    <label>Время</label>
+    <select required>
+      <option value="">Выберите</option>
+      <option>10:00</option>
+      <option>11:00</option>
+      <option>12:00</option>
+      <option>14:00</option>
+    </select>
+
+    <input type="text" placeholder="Имя" required>
+
+    <input type="email" placeholder="Email" required>
+
+    <input type="tel"
+           placeholder="Телефон"
+           required
+           pattern="[0-9+\-\s]{6,}">
+
+    <button type="submit">Записаться</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>

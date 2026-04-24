@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <img src="images/logo.png" width="74" height="100">
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- 📍 ИНФО -->
+  <section class="contacts-info">
+    <h2>Контакты</h2>
+
+    <p>📍 Адрес: Москва, ул. Примерная, 10</p>
+
+    <p>
+      📞 Телефон:
+      <a href="tel:+79990000000">+7 999 000 00 00</a>
+    </p>
+
+    <p>
+      📧 Email:
+      <a href="mailto:info@vet.ru">info@vet.ru</a>
+    </p>
+
+    <p>🕒 Время работы: 09:00 – 21:00</p>
+  </section>
+
+  <!-- 📝 ФОРМА -->
+  <section class="contacts-form">
+
+    <h2>Обратная связь</h2>
+
+    <form action="success.html">
+
+      <input type="text"
+             placeholder="Имя"
+             required
+             minlength="2">
+
+      <input type="email"
+             placeholder="Email"
+             required>
+
+      <input type="tel"
+             placeholder="Телефон"
+             required
+             pattern="[0-9+\-\s]{6,}"
+             title="Введите телефон">
+
+      <input type="text"
+             placeholder="Тема"
+             required
+             minlength="3">
+
+      <textarea placeholder="Сообщение"
+                required
+                minlength="10"></textarea>
+
+      <button type="submit">Отправить</button>
+
+    </form>
+
+  </section>
+
+  <!-- 🗺 КАРТА (без JS) -->
+  <section class="map-section">
+    <h2>Мы на карте</h2>
+
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?text=Москва%20ул.%20Примерная%2010"
+      width="100%"
+      height="400"
+      style="border:0; border-radius:10px;">
+    </iframe>
+
+  </section>
+
+  <!-- 🌐 СОЦСЕТИ -->
+  <section class="social">
+    <h2>Соцсети</h2>
+
+    <div class="social-icons">
+      <a href="#">VK</a>
+      <a href="#">Telegram</a>
+      <a href="#">Instagram</a>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
